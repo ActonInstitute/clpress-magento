@@ -1,0 +1,17 @@
+$fontColor: #333333;
+$linkColor: #6d2812;
+$linkHover: #581d0a;
+$headerFont: "proxima-nova-condensed",sans-serif;
+$bodyFont: "vera-sans",sans-serif;
+
+$widescreen-below: max-width 1200px;
+$desktop-below: max-width 978px;
+$tablet-below: max-width 767px;
+$phone-below: max-width 480px;
+$big-phone-below: max-width 530px;
+$desktop-above: min-width 979px;
+
+$footerHeight: 290px;
+@include breakpoint($tablet-below){
+    $footerHeight: auto;
+}

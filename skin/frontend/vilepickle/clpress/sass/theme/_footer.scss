@@ -1,0 +1,19 @@
+#footer {
+    position: relative;
+    margin-top: -$footerHeight; /* negative value of footer height */
+    padding-top: 0px;
+    height: $footerHeight;
+    clear:both;
+    @include text-shadow(1px, 1px, 0px, #FFF);
+    
+    .footer-container{
+    	padding: 20px 20px 20px 20px;
+        height: $footerHeight;
+    	background-color: #e4e4dc;
+    }
+    address{
+        font-size: 14px;
+        font-size: 1.4rem;
+        
+    }
+} 

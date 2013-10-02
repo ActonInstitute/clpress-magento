@@ -1,0 +1,85 @@
+.bigbutton{
+    text-align: center;
+    a{
+        background-color: #6d2812;
+        padding: 5px 0;
+        margin: 10px 0 10px;
+        height: 100%;
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        font-family: $headerFont;
+        @include text-shadow(1px, 1px, 0px, rgba(0,0,0,0.6));
+        border: none;
+        &:hover, &:focus{
+            color: #FFF;
+            background-color: #4f1a09;
+        }
+    }
+}
+.bigbutton_stock{
+    a{
+        cursor: default;
+        background-color: #666;
+        margin: 0;
+        &:hover{
+            background-color: #666;
+            cursor: default;
+        }
+    }
+}
+
+.bigbutton_5 a,
+.bigbutton_4 a {
+    font-size: 24px;
+    font-size: 2.4rem;
+    @include breakpoint($widescreen-below){
+        font-size: 20px;
+        font-size: 2.0rem;
+        font-weight: normal;
+    }
+    @include breakpoint($desktop-below){
+        font-size: 18px;
+        font-size: 1.8rem;
+    }
+    @include breakpoint($tablet-below){
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-size: 2.4rem;
+    }
+}
+
+button{
+    &.button{
+        @extend .btn;
+        border: 0;
+        background-color: $linkColor;
+        color: #FFF;
+        background-image: none;
+        @include border-radius(0);
+        @include box-shadow(none);
+        font-family: $headerFont;
+        font-weight: bold;
+        font-size: 20px;
+        font-size: 2.0rem;
+        letter-spacing: 0.5px;
+        @include text-shadow(1px, 1px, 0px, rgba(0,0,0,0.6));
+        padding: 10px;
+        margin: 10px 0;
+        &:hover, &:focus{
+            background-color: $linkHover;
+            color: #FFF;
+            @include border-radius(0);
+            @include box-shadow(none);
+        }
+        span{
+        }
+    }
+    &.disabled{
+        span{
+            color:#bbb !important;
+        }
+    }
+}

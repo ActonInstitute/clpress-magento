@@ -1,0 +1,118 @@
+#header{
+    position: relative;
+    padding-top: 30px;
+}
+.header-content{
+    margin-top: 55px;
+    p{
+        font-size: 18px;
+        font-size: 1.8rem;
+        line-height: 1.5;
+        margin-bottom: 45px;
+    }
+}
+#logo{
+    img{
+        @include breakpoint($desktop-below){
+            margin-top: 30px;
+        }
+        @include breakpoint($tablet-below){
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+    }
+}
+.logo{
+    @include breakpoint($tablet-below){
+        text-align: center;
+    }
+}
+.headertop{
+    text-align: right;
+    margin-bottom: 5px;
+    @include breakpoint($desktop-below){
+        margin-bottom: 10px;
+    }
+    @include breakpoint($tablet-below){
+        text-align: center;
+    }
+}
+.slogan{
+    padding: 3px 3px;
+    text-align: center;
+    background-color: #f3f3f3;
+    margin: 10px 0 10px 0;
+}
+
+.slogan p{
+    margin: 0;
+    font-style: italic;
+    color: #909090;
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 18px;
+    font-size: 1.8rem;
+    @include breakpoint($desktop-below){
+        font-size: 16px;
+    }
+}
+.magento-menu-container{
+    @extend .slogan;
+    margin-top:0;
+    margin-bottom:20px;
+    @include breakpoint($tablet-below){
+        background-color: transparent;
+    }
+}
+
+.quick-access{
+    background:#444; 
+    color:#fff; 
+    padding:7px 13px; 
+    text-align:right;
+    .welcome-msg{
+        display:inline; 
+        margin:0; 
+        color:#fff;
+        a{
+            color:#ddd;
+        }
+    }
+    .form-language{
+        float:left;
+        label{
+            font-weight:bold; 
+            padding-right:5px; 
+            color:#fff; 
+            vertical-align:middle;
+        }
+        select{
+            padding:0;
+            &.flags{
+                option{
+                    background-position:4px 50%; 
+                    background-repeat:no-repeat; 
+                    padding-left:25px;
+                }
+            }
+        }
+    }
+    .links{
+        padding-left:8px;
+        display:inline;
+        li{
+            display:inline;
+            padding:0 4px 0 1px;
+            &.last{
+                a{
+                    padding:0; 
+                    background:none;
+                }
+            }
+        }
+        a{
+            color:#ddd;
+            padding:0 7px 0 0; 
+            background:url(../images/bkg_pipe1.gif) no-repeat 100% 50%;
+        }
+    }
+}

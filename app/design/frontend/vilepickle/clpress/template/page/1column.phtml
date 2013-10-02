@@ -1,0 +1,48 @@
+<?php
+/**
+ * @category    design
+ * @package     vilepickle_clpress
+ * @copyright   2013 David Lohmeyer
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>">
+<head>
+<script type="text/javascript" src="//use.typekit.net/tua5egu.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<?php echo $this->getChildHtml('head') ?>
+</head>
+<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+
+<div id="wrap">
+    <div id="pagebackground" class="container">
+
+        <?php echo $this->getChildHtml('header') ?>
+
+        <div id="main" class="row-fluid">
+            <div id="content" class="bodytext">
+                <div class="span12">
+                    <div id="content-inner" class="inner column center">
+                        <?php echo $this->getChildHtml('breadcrumbs') ?>
+                        <div id="content-area">
+                            <?php echo $this->getChildHtml('global_notices') ?>
+                            <?php echo $this->getChildHtml('global_messages') ?>
+                            <?php echo $this->getChildHtml('content') ?>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /content-inner /content -->
+        </div> <!-- /main -->
+    </div>
+</div><!-- /wrap -->
+
+<?php echo $this->getChildHtml('footer') ?>
+<?php echo $this->getChildHtml('before_body_end') ?>
+<?php echo $this->getAbsoluteFooter() ?>
+</body>
+</html>

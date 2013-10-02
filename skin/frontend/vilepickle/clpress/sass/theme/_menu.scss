@@ -1,0 +1,185 @@
+.js .tinynav{
+    display: none;
+}
+@include breakpoint($big-phone-below){
+    .js .tinynav { 
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .js #primary { display: none }
+    
+}
+
+@include breakpoint($tablet-below){
+    .js .headermagentomenu .tinynav { 
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .js .headermagentomenu ul.links { display: none }
+}
+
+.headermenu{
+    font-family: $headerFont;
+    border-bottom: 8px solid #dbdbdb;
+    text-transform: uppercase;
+    text-align: right;
+    @include breakpoint($tablet-below){
+        text-align: center;
+    }
+    ul{
+        display: inline;
+        @include breakpoint($tablet-below){
+            text-align: center;
+        }
+        list-style:none;
+        margin:0;
+        padding:0;
+    }
+    li.last a{
+        border: none;
+        padding: 3px 0 3px 15px;
+    }
+    li.first a{
+        @include breakpoint($tablet-below){
+            padding-left: 0;
+        }
+    }
+    li{
+        display:inline;
+        list-style:none;
+        margin:0;
+        padding:0;
+        position:relative;
+        @include breakpoint($tablet-below){
+            text-align: center;
+            display: inline-block;
+        }
+        a{
+            font-size: 40px;
+            font-size: 4.0rem;
+            margin:0 0 0 0;
+            padding:3px 15px 3px 15px;
+            text-decoration:none;
+            line-height:1.5;
+            border-right: 1px solid #dbdbdb;
+            font-weight: bold;
+            @include breakpoint($widescreen-below){
+                font-size: 30px;
+                font-size: 3.0rem;
+            }
+            @include breakpoint($desktop-below){
+                font-size: 25px;
+                font-size: 2.5rem;
+            }
+
+            &:hover{
+                @include text-shadow(0px, 0px, 10px, rgba(0,0,0,0.10));
+            }
+            &.active{
+                @include text-shadow(0px, 0px, 10px, rgba(0,0,0,0.10));
+                color: #333;
+            }
+        }
+    }
+}
+.headersecondmenu{
+    @include breakpoint($phone-below){
+        display: none;
+    }
+}
+.headersecondmenu, .headermagentomenu{
+    @extend .headermenu;
+    border-bottom: none;
+    padding-top: 10px;
+    letter-spacing: 0.5px;
+
+    li.facebook{
+        a{
+            color: #0d3887;
+        }
+    }
+    li.twitter{
+        a{
+            color: #0d7287;
+        }
+    }
+    li{
+        @include breakpoint($tablet-below){
+            margin-left: 0;
+        }
+    }
+    li.last a{
+        border: none;
+        padding: 3px 0 3px 10px;
+    }
+    li, li.active{
+        a{
+            font-size: 24px;
+            font-size: 2.4rem;
+            border-right: none;
+            padding:3px 15px 3px 15px;
+            color: #909090;
+            font-weight: normal;
+        }
+    }
+}
+
+.headermagentomenu{
+    padding-top: 0;
+
+    ul{
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        li{
+            display: inline-block;
+            a{                
+                @include breakpoint($desktop-below){
+                    font-size: 18px;
+                    font-size: 1.8rem;
+                }
+                @include breakpoint($tablet-below){
+                    font-size: 14px;
+                    font-size: 1.4rem;
+                }
+            }
+
+            &.first{
+                a{
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+.footermenu, #footer .footersecondmenu{
+    ul{
+        list-style:none;
+        margin:0;
+        padding:0;
+    }
+    li{
+        list-style:none;
+        margin:0;
+        padding:0;
+        a{
+            line-height:1.5;
+            &:hover{
+                color: $linkHover;
+            }
+        }
+    }
+}
+#footer .footersecondmenu .menu-block-2{
+    ul.menu{
+        margin-bottom: 15px;
+    }
+}
+.footer-container .footermenu{
+    @include breakpoint($tablet-below){
+        display: none;
+    }
+}

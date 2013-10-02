@@ -1,0 +1,307 @@
+/* Form Elements */
+input,
+select,
+textarea,
+button { 
+	vertical-align:middle; 
+	color:#2f2f2f; 
+}
+
+select { 
+	option{
+		padding-right:10px; 
+	}
+	&.multiselect{
+		option{
+			border-bottom:1px solid #b6b6b6; 
+			padding:1px 5px;
+			&:last-child{
+				border-bottom:0;
+			}
+		}
+	}
+}
+
+textarea { 
+	overflow:auto; 
+	padding:2px; 
+}
+
+input{
+	&.input-text{
+		padding:2px;
+	}
+	&.radio{
+		margin-right:3px;
+	}
+	&.checkbox{
+		margin-right:3px;
+	}
+	&.qty{
+		width:2.5em !important;
+	}
+}
+
+p.control{
+	input.checkbox,
+	input.radio{
+		margin-right:6px;
+	}
+}
+
+.form-list{
+	margin-left: 0;
+	ul{
+		margin-left: 0;
+	}
+	li{
+		margin:0 0 6px;
+		padding-left: 0;
+		&.control{
+			label{
+				float:left;
+			}
+			input{
+				&.radio,
+				&.checkbox{
+					float: left;
+					margin-top:-1px; 
+					margin-right:4px;
+				}
+			}
+			.input-box{
+				clear:none; 
+				display:inline; 
+				width:auto;
+			}
+		}
+		&.additional-row{
+			border-top:1px solid #ccc; 
+			margin-top:10px; 
+			padding-top:7px;
+			.btn-remove{
+				float:right; 
+				margin:5px 0 0;
+			}
+		}
+	}
+	label{
+		float:left; 
+		color:#555; 
+		font-weight:bold; 
+		position:relative; 
+		z-index:0;
+		&.required{
+			em{
+				float:right; 
+				font-style:normal; 
+				color:#eb340a; 
+				position:absolute; 
+				top:0; 
+				right:-7px;
+			}
+		}
+	}
+	.input-box{
+		display:block; 
+		clear:both; 
+	}
+	.field{
+		float:left; 
+	}
+
+	textarea{
+		width:254px; 
+		height:10em;
+	}
+	.input-range{
+		input.input-text{
+			width:74px;
+		}
+	}
+}
+
+.form-list-narrow{
+	li{
+		margin-bottom:0;
+		.input-box{
+			margin-bottom:6px;
+		}
+	}
+}
+
+.form-list{
+	.customer-name-prefix,
+	.customer-name-suffix,
+	.customer-name-prefix-suffix,
+	.customer-name-prefix-middlename,
+	.customer-name-middlename-suffix,
+	.customer-name-prefix-middlename-suffix { 
+		.input-box{
+			width:auto; 
+		}
+	}
+	.name-prefix, .name-suffix{
+		width:65px;
+		select{
+			width:55px;
+		}
+		input.input-text{
+			width:49px;
+		}
+	}
+	.name-middlename{
+		width:70px;
+		input.input-text{
+			width:49px;
+		}
+	}
+	.customer-name-prefix-middlename-suffix,
+	.customer-name-prefix-middlename{
+		.name-firstname{
+			width:140px;
+			input.input-text{
+				width:124px;
+			}
+		}
+		.name-lastname{
+			width:205px;
+			input.input-text { 
+				width:189px; 
+			}
+		}
+	}
+	.customer-name-prefix-suffix{
+		.name-firstname{
+			width:210px;
+		}
+		.name-lastname{
+			width:205px;
+		}
+		.name-firstname,
+		.name-lastname{
+			input.input-text{
+				width:189px;
+			}
+		}
+	}
+	.customer-name-prefix,
+	.customer-name-middlename{
+		.name-firstname{
+			width:210px;
+		}
+	}
+	.customer-name-suffix,
+	.customer-name-middlename,
+	.customer-name-middlename-suffix,
+	.customer-name-middlename-suffix{
+		.name-firstname,
+		.name-lastname{
+			width:205px;
+		}
+	}
+	.customer-name-prefix,
+	.customer-name-suffix,
+	.customer-name-middlename,
+	.customer-name-middlename-suffix{
+		.name-firstname,
+		.name-lastname{
+			input.input-text{
+				width:189px;
+			}
+		}
+	}
+	.customer-dob{
+		.dob-month,
+		.dob-day,
+		.dob-year{
+			float:left; 
+			width:85px;
+		}
+		input.input-text{
+			display:block; 
+			width:74px;
+		}
+		label{
+			font-weight:normal; 
+			color:#888;
+		}
+		.dob-day,
+		.dob-month{
+			width:60px;
+			input.input-text{
+				width:46px;
+			}
+		}
+		.dob-year{
+			width:140px;
+			input.input-text{
+				width:134px;
+			}
+		}
+	}
+}
+
+.buttons-set{
+	clear:both; 
+	margin:4em 0 0; 
+	padding:8px 0 0; 
+	border-top:1px solid #e4e4e4; 
+	text-align:right;
+	p.required{
+		margin:0 0 10px;
+	}
+	.back-link{
+		float:left; 
+		margin:0;
+	}
+	button.button{
+		float:right; 
+		margin-left:5px;
+	}
+}
+
+.buttons-set-order{
+	margin:10px 0 0;
+	.please-wait{
+		padding:5px 7px 0 0;
+	}
+}
+
+.fieldset { 
+	margin:0 10px 25px; 
+	.legend{
+		margin:0 -10px 12px; 
+		background:#f1f1f1; 
+		padding:2px 10px; 
+	}
+}
+
+.validation-advice{
+	clear:both; 
+	min-height:13px; 
+	margin:3px 0 0; 
+	padding-left:13px; 
+	background:url(../images/validation_advice_bg.gif) 2px 3px no-repeat; 
+	color:#eb340a;
+}
+
+.validation-failed{
+	border:1px solid #eb340a !important; 
+	background:#faebe7 !important;
+}
+
+p.required { 
+	text-align:right; 
+	color:#EB340A; 
+}
+
+.v-fix { 
+	float:left; 
+	.validation-advice{
+		display:block; 
+		width:12em; 
+		margin-right:-12em; 
+		position:relative;
+	}
+}

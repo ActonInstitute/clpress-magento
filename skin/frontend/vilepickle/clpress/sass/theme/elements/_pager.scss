@@ -1,0 +1,39 @@
+.pager { 
+	padding:10px; 
+	border-top:1px solid #eaeaea; 
+	text-align:center; 
+	.amount{
+		float:left; 
+		margin:0;
+	}
+	.limiter{
+		float:right;
+		line-height: 1.5;
+		vertical-align:middle;
+		display: inline-block;
+		label{
+			vertical-align:middle;
+			float: left;
+			margin-bottom: 0;
+			margin-right: 5px;
+			display: none;
+
+		}
+		select{
+			padding:0; 
+			margin:0 0 1px; 
+			vertical-align:middle;
+			width: 100px;
+		}
+	}
+	.pages{
+		margin:0 140px;
+		ol{
+			display:inline;
+		}
+		li{
+			display:inline; 
+			margin:0 2px;
+		}
+	}
+}

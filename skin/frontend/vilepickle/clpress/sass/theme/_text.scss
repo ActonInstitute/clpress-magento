@@ -1,0 +1,168 @@
+/* `Basic HTML
+----------------------------------------------------------------------------------------------------*/
+html{
+    font-size: 62.5%;
+} 
+body {
+    color: $fontColor;
+    line-height: 1.5;
+    font-family: $bodyFont;
+}
+
+hr {
+    border: 0 #ccc solid;
+    border-top-width: 1px;
+    clear: both;
+    height: 0;
+}
+
+p{
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+/* Links */
+a{
+    color: $linkColor;
+    text-decoration: none;
+    &:hover, &:focus{
+        color: $linkHover;
+        text-decoration: none;
+    }
+}
+
+label, input, button, select, textarea{
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* `Headings
+----------------------------------------------------------------------------------------------------*/
+
+h1 {
+    font-size: 36px;
+    font-size: 3.6rem;
+    @include breakpoint($widescreen-below){
+        font-size: 28px;
+        font-size: 2.5rem;
+    }
+    @include breakpoint($tablet-below){
+        font-size: 25px;
+        font-size: 2.5rem;
+    }
+    font-family: $headerFont;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+h2 {
+    font-size: 32px;
+    font-size: 3.2rem;
+    @include breakpoint($widescreen-below){
+        font-size: 25px;
+        font-size: 2.5rem;
+    }
+    font-family: $headerFont;
+    font-weight: bold;
+    line-height: 1.5;
+    border-bottom: 2px solid #efefef;
+    @include left-background-gradient(#FFFFFF, #f3f3f3);
+    @include text-shadow(1px, 1px, 0, rgba(255,255,255,1));
+}
+
+h3 {
+    font-size: 29px;
+    font-size: 2.9rem;
+    @include breakpoint($widescreen-below){
+        font-size: 25px;
+        font-size: 2.5rem;
+    }
+    @include breakpoint($tablet-below){
+        font-size: 22px;
+        font-size: 2.2rem;
+    }
+    font-family: $headerFont;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+h4 {
+    font-size: 20px;
+    font-size: 2.0rem;
+    @include breakpoint($widescreen-below){
+        font-size: 18px;
+        font-size: 1.8rem;
+    }
+    font-family: $headerFont;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+#footer h4{
+    @include text-shadow(1px, 1px, 0px, rgba(255,255,255,1));
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-family: $headerFont;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+h6 {
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-family: $headerFont;
+   font-weight: normal;
+    line-height: 1.5;
+}
+
+/* `Spacing
+----------------------------------------------------------------------------------------------------*/
+
+ol, ol li {
+    list-style: decimal;
+}
+
+.bodytext{
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+
+.bodytext ul, #footer ul {
+    list-style: disc;
+    line-height: 1.5;
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+
+.bodytext ul li{
+    margin-left: 0;
+    list-style: none;
+}
+
+li {
+    margin-left: 20px;
+}
+
+p,
+dl,
+hr,
+h1,
+h2,
+h3,
+h5,
+h6,
+ol,
+ul,
+pre,
+table,
+address,
+fieldset,
+figure {
+    margin-bottom: 15px;
+}
